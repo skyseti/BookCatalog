@@ -1,0 +1,26 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:uxap="sap.uxap" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout">
+	<f:SimpleForm>
+		<Label text="{i18n>author}" />
+		<Select
+			forceSelection="false"
+			selectedKey="{/SelectedProduct}"
+			items="{
+				path: 'AuthorsModel>/',
+				sorter: { path: 'Name' }
+			}"
+			change="onAuthorSelectedChange">
+			<core:Item key="{AuthorsModel>id}" text="{AuthorsModel>firstName}  {AuthorsModel>lastName}" />
+		</Select>
+		<Label text="{i18n>authorsBooks}" />
+		<Select
+			id="idBookListSelect"
+			forceSelection="true"
+			selectedKey="{/SelectedProduct}"
+			items="{
+				path: 'BooksModel>/'
+			}">
+			<core:Item key="{BooksModel>id}" text="{BooksModel>title}" />
+		</Select>
+	</f:SimpleForm>
+</core:FragmentDefinition>

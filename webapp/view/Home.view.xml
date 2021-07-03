@@ -1,0 +1,15 @@
+<mvc:View
+	controllerName="sap.ui.demo.basicTemplate.controller.Home"
+	displayBlock="true"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.ui.layout.form">
+	<Page
+		id="page"
+		title="{i18n>title}">
+		<content>
+			<core:Fragment fragmentName="sap.ui.demo.basicTemplate.view.fragments.Catalog" type="XML"/>
+		</content>
+	</Page>
+</mvc:View>
